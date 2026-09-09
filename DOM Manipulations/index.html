@@ -25,9 +25,42 @@
         </div>
     </div> -->
 
-    <div class="parent1">
+    <!-- <div class="parent1">
 
-    </div>
+    </div> -->
+
+    <form action="" id="form">
+   <div>
+         <label for="username">Enter your name: </label>
+        <input type="text" id="username" placeholder="username...">
+        <p class="error"></p>
+   </div>
+
+   <div>
+    <label for="password">Enter your password: </label>
+    <input type="text" id="password">
+    <p class="error"></p>
+   </div>
+
+   <div>
+    <label for="email">Enter your email: </label>
+    <input type="email" id="email">
+    <p class="error"></p>
+   </div>
+
+   <div>
+    <label for="bio">Write your bio</label>
+    <textarea name="bio" id="bio"></textarea>
+    <p id="charCount"></p>
+   </div>
+
+   <input type="checkbox" id="check">
+   <label for="check">I agree to terms and conditions</label><br><br>
+
+   <button id="btn" type="submit">Create account</button>
+
+   <h1 style="font-size: 20px;" class="hidden" >Account Created Successfully</h1>
+    </form>
     <script src="index.js"></script>
 </body>
 </html>

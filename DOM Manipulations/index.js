@@ -1,3 +1,5 @@
+// Day 1
+
 // let h1 = document.querySelector("h1");
 // h1.textContent = "good morning"
 
@@ -83,93 +85,177 @@
 // let items2 = products;
 // console.log(items2[2]);
 
-let parent = document.querySelector(".parent");
-let btn = document.querySelector("button");
-// btn.addEventListener("click",(e)=>{
-//     console.log("button clicked");
-//     console.log(e.target);
-//     console.log(e.currentTarget);
-// })
+// Day 2
 
-let outter = document.querySelector(".outter");
-let inner = document.querySelector(".inner");
-let btn1 = document.querySelector("#btn1");
-// outter.addEventListener("click",(e)=>{
-//     e.stopPropagation();
-//     console.log("outter");
-// })
-// inner.addEventListener("click",(e)=>{
-//     e.stopPropagation();
-//     console.log("inner");
-// })
-// btn1.addEventListener("click",(e)=>{
-//     console.log("button");
-//     e.stopPropagation();
-// })
+// let parent = document.querySelector(".parent");
+// let btn = document.querySelector("button");
+// // btn.addEventListener("click",(e)=>{
+// //     console.log("button clicked");
+// //     console.log(e.target);
+// //     console.log(e.currentTarget);
+// // })
+
+// let outter = document.querySelector(".outter");
+// let inner = document.querySelector(".inner");
+// let btn1 = document.querySelector("#btn1");
+// // outter.addEventListener("click",(e)=>{
+// //     e.stopPropagation();
+// //     console.log("outter");
+// // })
+// // inner.addEventListener("click",(e)=>{
+// //     e.stopPropagation();
+// //     console.log("inner");
+// // })
+// // btn1.addEventListener("click",(e)=>{
+// //     console.log("button");
+// //     e.stopPropagation();
+// // })
 
 
-products = [
-    {
-        name : "iphone",
-        price : 4586778,
-        url : "https://m.media-amazon.com/images/I/617O+RkwdPL._AC_UY436_QL65_.jpg"
-    },
-    {
-        name : "laptop",
-        price : 2475,
-        url : "https://m.media-amazon.com/images/I/71MbIVSIhAL._AC_UY436_QL65_.jpg"
-    },
-    {
-        name : "pen",
-        price : 286,
-        url : "https://m.media-amazon.com/images/I/51bqn1--ZbL._AC_UL640_QL65_.jpg"
-    },
-    {
-        name : "cycle",
-        price : 264,
-        url : "https://m.media-amazon.com/images/I/81yW5Z8Yk0L._AC_UY436_QL65_.jpg"
-    }
-]
+// products = [
+//     {
+//         name : "iphone",
+//         price : 4586778,
+//         url : "https://m.media-amazon.com/images/I/617O+RkwdPL._AC_UY436_QL65_.jpg"
+//     },
+//     {
+//         name : "laptop",
+//         price : 2475,
+//         url : "https://m.media-amazon.com/images/I/71MbIVSIhAL._AC_UY436_QL65_.jpg"
+//     },
+//     {
+//         name : "pen",
+//         price : 286,
+//         url : "https://m.media-amazon.com/images/I/51bqn1--ZbL._AC_UL640_QL65_.jpg"
+//     },
+//     {
+//         name : "cycle",
+//         price : 264,
+//         url : "https://m.media-amazon.com/images/I/81yW5Z8Yk0L._AC_UY436_QL65_.jpg"
+//     }
+// ]
 
-let parent1 = document.querySelector(".parent1");
-parent1.classList.add("list");
-let dltbtn,card,cart;
-products.forEach((product)=>{
-    card = document.createElement("div")
-    parent1.append(card);
-    card.classList.add("product");
-    card.textContent = `${product.name}`;
-    dltbtn = document.createElement("button");
-    dltbtn.textContent = "Remove item";
-    card.append(dltbtn);
-    cart = document.createElement("button");
-    cart.textContent = "Add to cart";
-    card.append(cart);
-    // dltbtn.addEventListener("click",(e)=>{
-    //     console.log("target",e.target);
-    //     console.log("currentTarget",e.currentTarget);
+// let parent1 = document.querySelector(".parent1");
+// parent1.classList.add("list");
+// let dltbtn,card,cart;
+// products.forEach((product)=>{
+//     card = document.createElement("div")
+//     parent1.append(card);
+//     card.classList.add("product");
+//     card.textContent = `${product.name}`;
+//     dltbtn = document.createElement("button");
+//     dltbtn.textContent = "Remove item";
+//     card.append(dltbtn);
+//     cart = document.createElement("button");
+//     cart.textContent = "Add to cart";
+//     card.append(cart);
+//     // dltbtn.addEventListener("click",(e)=>{
+//     //     console.log("target",e.target);
+//     //     console.log("currentTarget",e.currentTarget);
         
-    // })
-})
+//     // })
+// })
 
 
-parent1.addEventListener("click",(e)=>{
-    // console.log("target",e.target);
-    // console.log("currentTarget",e.currentTarget);
-    // console.log(dltbtn.parentElement);
-    // console.log(e.target.tagName);
-    // console.log(e.target.textContent);
+// parent1.addEventListener("click",(e)=>{
+//     // console.log("target",e.target);
+//     // console.log("currentTarget",e.currentTarget);
+//     // console.log(dltbtn.parentElement);
+//     // console.log(e.target.tagName);
+//     // console.log(e.target.textContent);
     
-    if(e.target.tagName==="BUTTON" && e.target.textContent==="Remove item"){
-        // e.target.parentElement.remove();
-        e.target.closest(".product").remove();
+//     if(e.target.tagName==="BUTTON" && e.target.textContent==="Remove item"){
+//         // e.target.parentElement.remove();
+//         e.target.closest(".product").remove();
         
+//     }
+//     if(e.target.tagName==="BUTTON" && e.target.textContent==="Add to cart"){
+//         e.target.textContent = "Item Added to cart"
+//     }
+// })
+
+
+// Day 3
+
+let limit = 200;
+let charCount = document.querySelector("#charCount")
+let account = document.querySelector(".hidden");
+let username = document.querySelector("#username");
+let password = document.querySelector("#password");
+let email = document.querySelector("#email")
+let bio = document.querySelector("#bio");
+let checkbox = document.querySelector("#check");
+let btn = document.querySelector("#btn");
+let form = document.querySelector("#form");
+let errorMessage = document.querySelector(".error")
+
+
+
+// username.addEventListener("input",(e)=>{
+//     console.log(username.value);
+// })
+
+// username.addEventListener("change",(e)=>{
+//     console.log(username.value);
+// })
+
+// username.addEventListener("focus",(e)=>{
+//     console.log("focused");
+// })
+// username.addEventListener("blur",(e)=>{
+//     console.log("blur");
+// })
+
+// checkbox.addEventListener("input",(e)=>{
+//     console.log(checkbox.checked);
+// })
+
+function showError(errorMessage , error){
+    errorMessage.textContent = error
+}
+function clearError(errorMessage){
+    errorMessage.textContent = ""
+}
+function validUsername(username){
+    if(username.value.trim().length===0){
+        showError(errorMessage,"write your correct name");
+        return false
     }
-    if(e.target.tagName==="BUTTON" && e.target.textContent==="Add to cart"){
-        e.target.textContent = "Item Added to cart"
+    if(username.value.trim().length <3){
+        showError(errorMessage,"name should be at least of 3 characters");
+        return false;
     }
+    else{
+        clearError(errorMessage)
+        return true;
+    }
+
+}
+form.addEventListener("submit",(e)=>{
+    e.preventDefault();
+    let isValidUsername = validUsername(username);
+     
+    if(isValidUsername){
+        account.classList.remove("hidden")
+    }
+    else{
+        console.log("try again");
+    }
+    
 })
 
+username.addEventListener("blur",(e)=>{
+    clearError(errorMessage)
+})
 
+form.addEventListener("click",(e)=>{
+    account.classList.add("hidden")
+})
 
-
+bio.addEventListener("input",(e)=>{
+    let res = limit - bio.value.length;
+    charCount.textContent = `${res} characters remaining`
+})
+username.addEventListener("blur",(e)=>{
+    clearError(errorMessage)
+})
